@@ -15,6 +15,13 @@ def test_create_note(test_app, monkeypatch):
             "description": "something else",
             "completed": "False",
             "created_date": get_current_datetime()
+            agadfgagfg
+            ag   sag fg  ag 
+            daf
+            gda g ad dfg dfg 
+            ag asg gsag sfagsggsfggs
+            adgsgsgsgs
+            adgadgfdgdf
         },
         "response": {
             "id": 1,
@@ -91,17 +98,25 @@ def test_read_note_incorrect_id(test_app, monkeypatch):
 def read_all_notes(test_app, monkeypatch):
     test_data = [{"title": "something", "description": "something else", "id": 1, "completed": "False",
                   "created_date": dt.now().strftime("%Y-%m-%d %H:%M")},
-                 {"title": "something", "description": "something else", "id": 2, "completed": "False",
-                  "created_date": dt.now().strftime("%Y-%m-%d %H:%M")}]
-
-    async def mock_get_all():
+                 fvfbfsb
+                 sbsfbf
+    sfv sff s ff
+    svsbbfbf f sdfs f s
         return test_data
-
+sdfssfg
     monkeypatch.setattr(crud, "get_all", mock_get_all)
 
     response = test_app.get("/notes/")
     assert response.status_code == 200
-    assert response.json() == test_data
+dfsdfsdfsd
+
+dsf
+sdf
+dsf
+ds
+fds
+f
+dsf
 
 
 @pytest.mark.parametrize(
